@@ -1,0 +1,41 @@
+{
+  "name": "cap-nodejs-codejam2021",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "express": "^4",
+    "hdb": "^0.19.0"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.0",
+    "sqlite3": "^5.1.4"
+  },
+  "scripts": {
+    "start": "cds run",
+    "watch-fe-bookshop": "cds watch --open fe-bookshop/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "mybookshop.db"
+        }
+      }
+    },
+    "i18n": {
+      "folders": [
+        "_i18n",
+        "i18n",
+        " assets/i18n"
+      ]
+    }
+  },
+  "sapux": [
+    "app/fe-bookshop"
+  ]
+}
